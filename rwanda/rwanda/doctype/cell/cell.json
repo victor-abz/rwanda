@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:cell_code",
+ "creation": "2023-12-11 14:45:51.195639",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "province_code",
+  "district_code",
+  "sector_code",
+  "cell_code",
+  "cell_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "cell_name",
+   "fieldtype": "Data",
+   "label": "Cell Name"
+  },
+  {
+   "fieldname": "sector_code",
+   "fieldtype": "Link",
+   "label": "Sector Code",
+   "options": "Sector"
+  },
+  {
+   "fieldname": "cell_code",
+   "fieldtype": "Data",
+   "label": "Cell Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "province_code",
+   "fieldtype": "Link",
+   "label": "Province",
+   "options": "Province"
+  },
+  {
+   "fieldname": "district_code",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-11 20:38:43.401185",
+ "modified_by": "Administrator",
+ "module": "Rwanda",
+ "name": "Cell",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "cell_name"
+}

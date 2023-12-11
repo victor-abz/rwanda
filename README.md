@@ -3,11 +3,10 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
-[![NPM](https://nodei.co/npm/rwanda.png)](https://nodei.co/npm/rwanda/)
 
 This is Frappe Application that returns provinces, districts, sectors, villages and cells found in Rwanda.
 
-Rwanda is organized in four provinces in addition to the Kigali city, 30 Districts, 416 Sectors, 2148 Cells and 14 837 Villages.
+Rwanda is organized in four provinces in addition to the Kigali city, 30 Districts, 416 Sectors, 2148 Cells and 14837 Villages.
 
 
 ## Install
@@ -20,7 +19,7 @@ bench --site site-name install-app rwanda
 ## Usage
 
 ```py
-import get_province from rwanda
+import province from rwanda
 ```
 
 All inputs are case-insensitive.

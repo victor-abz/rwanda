@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include rwanda *.css
+recursive-include rwanda *.csv
+recursive-include rwanda *.html
+recursive-include rwanda *.ico
+recursive-include rwanda *.js
+recursive-include rwanda *.json
+recursive-include rwanda *.md
+recursive-include rwanda *.png
+recursive-include rwanda *.py
+recursive-include rwanda *.svg
+recursive-include rwanda *.txt
+recursive-exclude rwanda *.pyc

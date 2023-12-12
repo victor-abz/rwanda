@@ -5,10 +5,9 @@ import pandas as pd
 
 
 def import_villages():
-    # Replace 'your_file.csv' with the actual path to your CSV file
+    # CSV file of Rwanda Administrative levels as per BNR Guidelines
     csv_file_path = os.path.join(os.path.dirname(__file__), "cells_per_bnr.csv")
 
-    # Define the header based on your provided information
     csv_header = [
         "village_code",
         "village_name",
@@ -25,10 +24,8 @@ def import_villages():
     try:
         # Read the CSV file into a pandas DataFrame
         df = pd.read_csv(csv_file_path, header=None, names=csv_header, skiprows=1)
-
-        # Display the DataFrame (optional)
-        print(df)
-
+        
+        # Import the levels
         for _, row in df.iterrows():
             province_code = create_or_get(
                 "Province",
@@ -85,8 +82,6 @@ def import_villages():
                 row["village_code"],
             )
 
-        print("Data populated successfully.")
-
     except FileNotFoundError:
         print(f"Error: File '{csv_file_path}' not found.")
     except pd.errors.EmptyDataError:
@@ -98,7 +93,7 @@ def import_villages():
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
-
+# Create Administrative levels
 def create_or_get(doc_type, filters, name):
     if frappe.db.exists(doc_type, name, cache=True):
         existing_doc = frappe.get_doc(doc_type, name)

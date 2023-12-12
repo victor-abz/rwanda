@@ -6,7 +6,12 @@
 
 This is Frappe Application that returns provinces, districts, sectors, villages and cells found in Rwanda.
 
-Rwanda is organized in four provinces in addition to the Kigali city, 30 Districts, 416 Sectors, 2148 Cells and 14837 Villages.
+Rwanda is organized by: 
+- 5 provinces
+- 30 Districts
+- 416 Sectors 
+- 2148 Cells and 
+- 14837 Villages.
 
 
 ## Install
@@ -19,59 +24,128 @@ bench --site site-name install-app rwanda
 ## Usage
 
 ```py
-import province from rwanda
+from rwanda import get_provinces, get_districts, get_sectors, get_cells, get_villages
 ```
 
-All inputs are case-insensitive.
 
-### Provinces()
+## Functions
 
-Returns array of country provinces.
+### `get_provinces()`
+
+This function retrieves a list of provinces along with their respective codes.
+
+```python
+provinces = get_provinces()
+```
+
+Returns array of country provinces object.
 
 ```py
-['East', 'Kigali', 'North', 'South', 'West']
+[{"province_code": "OL05000025", "province_name": "Iburasirazuba"}, {"province_code": "OL05000020", "province_name": "Amajyaruguru"}, {"province_code": "OL05000015", "province_name": "Iburengerazuba"}, {"province_code": "OL05000010", "province_name": "Amajyepfo"}, {"province_code": "OL05000005", "province_name": "Umujyi wa Kigali"}]
 ```
 
-### Districts()
 
-By default it returns an array of country districts, if no params (province) is given
+### `get_districts(province=None)`
+Retrieve a list of districts within a specified province code, or all districts if no province is provided.
+```python
+districts = get_districts(province="OL05000025")
+```
 
-- Districts(province)
+### `get_sectors(province=None, district=None)`
+Retrieve a list of sectors within a specified province code or district code, or all sectors if no province or district is provided.
 
-  If province is given it returns an array of districts found in that province.
-  It returns `undefined` if province is not found.
+```python
+sectors = get_sectors(district="OL04000150")
+```
+#### Example 1: Retrieve all sectors
+```python
+all_sectors = get_sectors()
+print(all_sectors)
+```
 
-### Sectors()
+#### Example 2: Retrieve sectors in a specific province
+```python
+sectors_in_province = get_sectors(province="OL05000025")
+print(sectors_in_province)
+```
 
-By default it returns array of country sectors, if no params (province, district) are given
+#### Example 3: Retrieve sectors in a specific  district
+```python
+sectors_in_district = get_sectors(district="OL04000150")
+print(sectors_in_district)
+```
 
-- Sectors(province, district)
-
-  If province and district are given it returns an array of sectors found from the given district in that province.
-  It returns `undefined` if either province or district is not found.
-
-### Cells()
-
-By default it returns an array of all country cells.
-
-- Cells(province, district, sector)
-
-  if province, district and sector are given it returns an array of Cells found from the given sector.
-  It returns `undefined` if either province, district or sector is not found.
-
-### Villages()
-
-By default it returns an array of all country villages.
-
-- Villages(province, district, sector, cell)
-
-  if province, district, sector and cell are given it returns an array of Villages found from the given cell.
-  It returns `undefined` if either province, district , sector or cell is not found.
+#### Example 3: Retrieve sectors in a specific province and district
+```python
+sectors_in_district = get_sectors(province="OL05000025", district="OL04000150")
+print(sectors_in_district)
+```
 
 
-## License
+### `get_cells(province=None, district=None, sector=None)`
 
-MIT
+Retrieve a list of cells within a specified province, district, and sector, or all cells if no province, district, or sector is provided.
+
+```python
+cells = get_cells(province="OL05000025", district="OL04000150", sector="OL03002010")
+```
+
+# Example 1: Retrieve all cells
+```python
+all_cells = get_cells()
+print(all_cells)
+```
+
+# Example 2: Retrieve cells in a specific province
+```python
+cells_in_province = get_cells(province="OL05000025")
+print(cells_in_province)
+```
+# Example 3: Retrieve cells in a specific province and district
+```python
+cells_in_district = get_cells(province="OL05000025", district="OL04000150")
+print(cells_in_district)
+```
+# Example 4: Retrieve cells in a specific province, district, and sector
+```python
+cells_in_sector = get_cells(province="OL05000025", district="OL04000150", sector="OL03002010")
+print(cells_in_sector)
+```
+
+### `get_villages(province="OL05000025", district="OL04000150", sector="OL03002010", cell="OL02010410")`
+Retrieve a list of villages within a specified province, district, sector, and cell, or all villages if no province, district, sector, or cell is provided.
+
+```python
+villages = get_villages(province="OL05000025", district="OL04000150", sector="OL03002010", cell="OL02010410")
+```
+# Example 1: Retrieve all cells
+```python
+all_cells = get_cells()
+print(all_cells)
+```
+# Example 2: Retrieve cells in a specific province
+```python
+cells_in_province = get_cells(province="OL05000025")
+print(cells_in_province)
+```
+# Example 3: Retrieve cells in a specific province and district
+```python
+cells_in_district = get_cells(province="OL05000025", district="OL04000150")
+print(cells_in_district)
+```
+# Example 4: Retrieve cells in a specific province, district, and sector
+```python
+cells_in_sector = get_cells(province="OL05000025", district="OL04000150", sector="OL03002010")
+print(cells_in_sector)
+```
+
+### `search_region(region_name, region_types=None)`
+Search for regions by name (case-insensitive) in the specified region types or all region types. Returns a list of matching results.
+
+```python
+search_results = search_region(region_name="ExampleRegion", region_types=["Sector", "Cell"])
+```
+
 
 #### License
 

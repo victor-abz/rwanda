@@ -13,6 +13,34 @@ Rwanda is organized by:
 - 2148 Cells and 
 - 14837 Villages.
 
+## Table of Content
+- [Rwanda](#rwanda)
+- [Table of Content](#table-of-content)
+- [Install](#install)
+- [Usage](#usage)
+- [Functions](#functions)
+  - [`get_provinces()`](#get_provinces)
+  - [`get_districts(province=None)`](#get_districtsprovincenone)
+  - [`get_sectors(province=None, district=None)`](#get_sectorsprovincenone-districtnone)
+    - [Example 1: Retrieve all sectors](#example-1-retrieve-all-sectors)
+    - [Example 2: Retrieve sectors in a specific province](#example-2-retrieve-sectors-in-a-specific-province)
+    - [Example 3: Retrieve sectors in a specific  district](#example-3-retrieve-sectors-in-a-specific--district)
+    - [Example 3: Retrieve sectors in a specific province and district](#example-3-retrieve-sectors-in-a-specific-province-and-district)
+  - [`get_cells(province=None, district=None, sector=None)`](#get_cellsprovincenone-districtnone-sectornone)
+    - [Example 1: Retrieve all cells](#example-1-retrieve-all-cells)
+    - [Example 2: Retrieve cells in a specific province](#example-2-retrieve-cells-in-a-specific-province)
+    - [Example 3: Retrieve cells in a specific province and district](#example-3-retrieve-cells-in-a-specific-province-and-district)
+    - [Example 4: Retrieve cells in a specific province, district, and sector](#example-4-retrieve-cells-in-a-specific-province-district-and-sector)
+  - [`get_villages(province="OL05000025", district="OL04000150", sector="OL03002010", cell="OL02010410")`](#get_villagesprovinceol05000025-districtol04000150-sectorol03002010-cellol02010410)
+    - [Example 1: Retrieve all cells](#example-1-retrieve-all-cells-1)
+    - [Example 2: Retrieve cells in a specific province](#example-2-retrieve-cells-in-a-specific-province-1)
+    - [Example 3: Retrieve cells in a specific province and district](#example-3-retrieve-cells-in-a-specific-province-and-district-1)
+    - [Example 4: Retrieve cells in a specific province, district, and sector](#example-4-retrieve-cells-in-a-specific-province-district-and-sector-1)
+  - [`search_region(region_name, region_types=None)`](#search_regionregion_name-region_typesnone)
+    - [License](#license)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Install
 

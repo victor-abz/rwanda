@@ -39,8 +39,6 @@ Rwanda is organized by:
   - [`search_region(region_name, region_types=None)`](#search_regionregion_name-region_typesnone)
     - [License](#license)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 ## Install
 

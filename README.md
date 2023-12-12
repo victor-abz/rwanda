@@ -13,18 +13,6 @@ Rwanda is organized by:
 - 2148 Cells and 
 - 14837 Villages.
 
-## Table of Content
-- [Example 1: Retrieve all villages](#example-1-retrieve-all-villages)
-      - [Example 2: Retrieve villages in a specific province](#example-2-retrieve-villages-in-a-specific-province)
-- [Example 3: Retrieve villages in a specific province and district](#example-3-retrieve-villages-in-a-specific-province-and-district)
-- [Example 4: Retrieve villages in a specific province, district, and sector](#example-4-retrieve-villages-in-a-specific-province-district-and-sector)
-- [Example 5: Retrieve villages in a specific province, district, sector, and cell](#example-5-retrieve-villages-in-a-specific-province-district-sector-and-cell)
-    - [`search_region(region_name, region_types=None)`](#search_regionregion_name-region_typesnone)
-      - [Example 1: Search for a region by name in all region types](#example-1-search-for-a-region-by-name-in-all-region-types)
-      - [Example 2: Search for a region by name in specific region types](#example-2-search-for-a-region-by-name-in-specific-region-types)
-  - [License](#license)
-
-
 ## Install
 
 ```cli

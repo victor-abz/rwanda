@@ -15,7 +15,7 @@ Rwanda is organized by:
 
 ## Table of Content
 - [Example 1: Retrieve all villages](#example-1-retrieve-all-villages)
-- [Example 2: Retrieve villages in a specific province](#example-2-retrieve-villages-in-a-specific-province)
+      - [Example 2: Retrieve villages in a specific province](#example-2-retrieve-villages-in-a-specific-province)
 - [Example 3: Retrieve villages in a specific province and district](#example-3-retrieve-villages-in-a-specific-province-and-district)
 - [Example 4: Retrieve villages in a specific province, district, and sector](#example-4-retrieve-villages-in-a-specific-province-district-and-sector)
 - [Example 5: Retrieve villages in a specific province, district, sector, and cell](#example-5-retrieve-villages-in-a-specific-province-district-sector-and-cell)
@@ -134,22 +134,22 @@ villages = get_villages(province="OL05000025", district="OL04000150", sector="OL
 all_villages = get_villages()
 print(all_villages)
 ```
-# Example 2: Retrieve villages in a specific province
+#### Example 2: Retrieve villages in a specific province
 ```python
 villages_in_province = get_villages(province="OL05000025")
 print(villages_in_province)
 ```
-# Example 3: Retrieve villages in a specific province and district
+#### Example 3: Retrieve villages in a specific province and district
 ```python
 villages_in_district = get_villages(province="OL05000025", district="OL04000150")
 print(villages_in_district)
 ```
-# Example 4: Retrieve villages in a specific province, district, and sector
+#### Example 4: Retrieve villages in a specific province, district, and sector
 ```python
 villages_in_sector = get_villages(province="OL05000025", district="OL04000150", sector="OL03002010")
 print(villages_in_sector)
 ```
-# Example 5: Retrieve villages in a specific province, district, sector, and cell
+#### Example 5: Retrieve villages in a specific province, district, sector, and cell
 ```python
 villages_in_cell = get_villages(province="OL05000025", district="OL04000150", sector="OL03002010", cell="OL02010410")
 print(villages_in_cell)

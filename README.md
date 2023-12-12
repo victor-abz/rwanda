@@ -4,7 +4,7 @@
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
 
-This is Frappe Application that returns provinces, districts, sectors, villages and cells found in Rwanda.
+This is Frappe Application that provide provinces, districts, sectors, villages and cells found in Rwanda.
 
 Rwanda is organized by: 
 - 5 provinces
@@ -14,30 +14,15 @@ Rwanda is organized by:
 - 14837 Villages.
 
 ## Table of Content
-- [Rwanda](#rwanda)
-- [Table of Content](#table-of-content)
-- [Install](#install)
-- [Usage](#usage)
-- [Functions](#functions)
-  - [`get_provinces()`](#get_provinces)
-  - [`get_districts(province=None)`](#get_districtsprovincenone)
-  - [`get_sectors(province=None, district=None)`](#get_sectorsprovincenone-districtnone)
-    - [Example 1: Retrieve all sectors](#example-1-retrieve-all-sectors)
-    - [Example 2: Retrieve sectors in a specific province](#example-2-retrieve-sectors-in-a-specific-province)
-    - [Example 3: Retrieve sectors in a specific  district](#example-3-retrieve-sectors-in-a-specific--district)
-    - [Example 3: Retrieve sectors in a specific province and district](#example-3-retrieve-sectors-in-a-specific-province-and-district)
-  - [`get_cells(province=None, district=None, sector=None)`](#get_cellsprovincenone-districtnone-sectornone)
-    - [Example 1: Retrieve all cells](#example-1-retrieve-all-cells)
-    - [Example 2: Retrieve cells in a specific province](#example-2-retrieve-cells-in-a-specific-province)
-    - [Example 3: Retrieve cells in a specific province and district](#example-3-retrieve-cells-in-a-specific-province-and-district)
-    - [Example 4: Retrieve cells in a specific province, district, and sector](#example-4-retrieve-cells-in-a-specific-province-district-and-sector)
-  - [`get_villages(province="OL05000025", district="OL04000150", sector="OL03002010", cell="OL02010410")`](#get_villagesprovinceol05000025-districtol04000150-sectorol03002010-cellol02010410)
-    - [Example 1: Retrieve all cells](#example-1-retrieve-all-cells-1)
-    - [Example 2: Retrieve cells in a specific province](#example-2-retrieve-cells-in-a-specific-province-1)
-    - [Example 3: Retrieve cells in a specific province and district](#example-3-retrieve-cells-in-a-specific-province-and-district-1)
-    - [Example 4: Retrieve cells in a specific province, district, and sector](#example-4-retrieve-cells-in-a-specific-province-district-and-sector-1)
-  - [`search_region(region_name, region_types=None)`](#search_regionregion_name-region_typesnone)
-    - [License](#license)
+- [Example 1: Retrieve all villages](#example-1-retrieve-all-villages)
+- [Example 2: Retrieve villages in a specific province](#example-2-retrieve-villages-in-a-specific-province)
+- [Example 3: Retrieve villages in a specific province and district](#example-3-retrieve-villages-in-a-specific-province-and-district)
+- [Example 4: Retrieve villages in a specific province, district, and sector](#example-4-retrieve-villages-in-a-specific-province-district-and-sector)
+- [Example 5: Retrieve villages in a specific province, district, sector, and cell](#example-5-retrieve-villages-in-a-specific-province-district-sector-and-cell)
+    - [`search_region(region_name, region_types=None)`](#search_regionregion_name-region_typesnone)
+      - [Example 1: Search for a region by name in all region types](#example-1-search-for-a-region-by-name-in-all-region-types)
+      - [Example 2: Search for a region by name in specific region types](#example-2-search-for-a-region-by-name-in-specific-region-types)
+  - [License](#license)
 
 
 ## Install
@@ -144,25 +129,30 @@ Retrieve a list of villages within a specified province, district, sector, and c
 ```python
 villages = get_villages(province="OL05000025", district="OL04000150", sector="OL03002010", cell="OL02010410")
 ```
-#### Example 1: Retrieve all cells
+# Example 1: Retrieve all villages
 ```python
-all_cells = get_cells()
-print(all_cells)
+all_villages = get_villages()
+print(all_villages)
 ```
-#### Example 2: Retrieve cells in a specific province
+# Example 2: Retrieve villages in a specific province
 ```python
-cells_in_province = get_cells(province="OL05000025")
-print(cells_in_province)
+villages_in_province = get_villages(province="OL05000025")
+print(villages_in_province)
 ```
-#### Example 3: Retrieve cells in a specific province and district
+# Example 3: Retrieve villages in a specific province and district
 ```python
-cells_in_district = get_cells(province="OL05000025", district="OL04000150")
-print(cells_in_district)
+villages_in_district = get_villages(province="OL05000025", district="OL04000150")
+print(villages_in_district)
 ```
-#### Example 4: Retrieve cells in a specific province, district, and sector
+# Example 4: Retrieve villages in a specific province, district, and sector
 ```python
-cells_in_sector = get_cells(province="OL05000025", district="OL04000150", sector="OL03002010")
-print(cells_in_sector)
+villages_in_sector = get_villages(province="OL05000025", district="OL04000150", sector="OL03002010")
+print(villages_in_sector)
+```
+# Example 5: Retrieve villages in a specific province, district, sector, and cell
+```python
+villages_in_cell = get_villages(province="OL05000025", district="OL04000150", sector="OL03002010", cell="OL02010410")
+print(villages_in_cell)
 ```
 
 ### `search_region(region_name, region_types=None)`
@@ -172,7 +162,16 @@ Search for regions by name (case-insensitive) in the specified region types or a
 search_results = search_region(region_name="Kigali", region_types=["Province", "Villages"])
 ```
 
-
-#### License
+#### Example 1: Search for a region by name in all region types
+```python
+search_results_all_types = search_region(region_name="Rwamagana")
+print(search_results_all_types)
+```
+#### Example 2: Search for a region by name in specific region types
+```python
+search_results_specific_types = search_region(region_name="Rwamanaga", region_types=["Sector", "Cell"])
+print(search_results_specific_types)
+```
+## License
 
 MIT

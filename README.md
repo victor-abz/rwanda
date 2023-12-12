@@ -90,23 +90,23 @@ Retrieve a list of cells within a specified province, district, and sector, or a
 cells = get_cells(province="OL05000025", district="OL04000150", sector="OL03002010")
 ```
 
-# Example 1: Retrieve all cells
+#### Example 1: Retrieve all cells
 ```python
 all_cells = get_cells()
 print(all_cells)
 ```
 
-# Example 2: Retrieve cells in a specific province
+#### Example 2: Retrieve cells in a specific province
 ```python
 cells_in_province = get_cells(province="OL05000025")
 print(cells_in_province)
 ```
-# Example 3: Retrieve cells in a specific province and district
+#### Example 3: Retrieve cells in a specific province and district
 ```python
 cells_in_district = get_cells(province="OL05000025", district="OL04000150")
 print(cells_in_district)
 ```
-# Example 4: Retrieve cells in a specific province, district, and sector
+#### Example 4: Retrieve cells in a specific province, district, and sector
 ```python
 cells_in_sector = get_cells(province="OL05000025", district="OL04000150", sector="OL03002010")
 print(cells_in_sector)
@@ -118,22 +118,22 @@ Retrieve a list of villages within a specified province, district, sector, and c
 ```python
 villages = get_villages(province="OL05000025", district="OL04000150", sector="OL03002010", cell="OL02010410")
 ```
-# Example 1: Retrieve all cells
+#### Example 1: Retrieve all cells
 ```python
 all_cells = get_cells()
 print(all_cells)
 ```
-# Example 2: Retrieve cells in a specific province
+#### Example 2: Retrieve cells in a specific province
 ```python
 cells_in_province = get_cells(province="OL05000025")
 print(cells_in_province)
 ```
-# Example 3: Retrieve cells in a specific province and district
+#### Example 3: Retrieve cells in a specific province and district
 ```python
 cells_in_district = get_cells(province="OL05000025", district="OL04000150")
 print(cells_in_district)
 ```
-# Example 4: Retrieve cells in a specific province, district, and sector
+#### Example 4: Retrieve cells in a specific province, district, and sector
 ```python
 cells_in_sector = get_cells(province="OL05000025", district="OL04000150", sector="OL03002010")
 print(cells_in_sector)
@@ -143,7 +143,7 @@ print(cells_in_sector)
 Search for regions by name (case-insensitive) in the specified region types or all region types. Returns a list of matching results.
 
 ```python
-search_results = search_region(region_name="ExampleRegion", region_types=["Sector", "Cell"])
+search_results = search_region(region_name="Kigali", region_types=["Province", "Villages"])
 ```
 
 

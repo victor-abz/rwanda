@@ -40,7 +40,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 20:38:54.654889",
+ "modified": "2023-12-20 17:32:32.960641",
  "modified_by": "Administrator",
  "module": "Rwanda",
  "name": "Sector",
@@ -60,6 +60,7 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

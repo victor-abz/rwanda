@@ -33,7 +33,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-07 17:55:38.347417",
+ "modified": "2024-08-07 22:02:25.053632",
  "modified_by": "Administrator",
  "module": "Rwanda",
  "name": "District",
@@ -53,24 +53,12 @@
    "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Nursing User",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Doctor User",
+   "role": "All",
    "share": 1,
    "write": 1
   }

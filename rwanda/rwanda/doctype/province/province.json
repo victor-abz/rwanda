@@ -26,7 +26,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-07 17:55:05.642335",
+ "modified": "2024-08-07 22:02:09.332222",
  "modified_by": "Administrator",
  "module": "Rwanda",
  "name": "Province",
@@ -51,17 +51,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Nursing User",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Doctor User",
+   "role": "All",
    "share": 1,
    "write": 1
   }

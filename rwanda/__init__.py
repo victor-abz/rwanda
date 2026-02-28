@@ -12,9 +12,12 @@ Rwanda is organized by:
 - 14837 Villages.
 
 """
-from frappe import get_all
-
 __version__ = "0.0.1"
+
+
+def _get_all(*args, **kwargs):
+    from frappe import get_all
+    return _get_all(*args, **kwargs)
 
 
 def get_provinces():
@@ -23,7 +26,7 @@ def get_provinces():
 
     :return: List of dictionaries containing province_code and province_name.
     """
-    return get_all("Province", fields=["province_code", "province_name"])
+    return _get_all("Province", fields=["province_code", "province_name"])
 
 
 def get_districts(province=None):
@@ -34,7 +37,7 @@ def get_districts(province=None):
     :return: List of dictionaries containing district_code and district_name.
     """
     filters = {"province_code": province} if province else {}
-    return get_all("District", filters=filters, fields=["district_code", "district_name"])
+    return _get_all("District", filters=filters, fields=["district_code", "district_name"])
 
 
 def get_sectors(province=None, district=None):
@@ -50,7 +53,7 @@ def get_sectors(province=None, district=None):
         filters["province_code"] = province
     if district:
         filters["district_code"] = district
-    return get_all("Sector", filters=filters, fields=["province_code", "district_code", "sector_code", "sector_name"])
+    return _get_all("Sector", filters=filters, fields=["province_code", "district_code", "sector_code", "sector_name"])
 
 
 def get_cells(province=None, district=None, sector=None):
@@ -69,7 +72,7 @@ def get_cells(province=None, district=None, sector=None):
         filters["district_code"] = district
     if sector:
         filters["sector_code"] = sector
-    return get_all("Cell", filters=filters, fields=["province_code", "district_code", "sector_code", "cell_code", "cell_name"])
+    return _get_all("Cell", filters=filters, fields=["province_code", "district_code", "sector_code", "cell_code", "cell_name"])
 
 
 def get_villages(province=None, district=None, sector=None, cell=None):
@@ -93,7 +96,7 @@ def get_villages(province=None, district=None, sector=None, cell=None):
     if cell:
         filters["cell_code"] = cell
 
-    return get_all("Village", filters=filters, fields=["province_code", "district_code", "sector_code", "cell_code", "village_code", "village_name"])
+    return _get_all("Village", filters=filters, fields=["province_code", "district_code", "sector_code", "cell_code", "village_code", "village_name"])
 
 
 def search_region(region_name, region_types=None):
@@ -130,7 +133,7 @@ def search_region(region_name, region_types=None):
         }
 
         # Retrieve regions matching the filters
-        if regions := get_all(
+        if regions := _get_all(
             region_type,
             filters=filters,
             fields=[

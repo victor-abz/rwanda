@@ -8,7 +8,7 @@ requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
 dependencies = [
-    # "frappe~=15.0.0" # Installed and managed by bench.
+    # "frappe>=15,<17" # Installed and managed by bench. Compatible with Frappe v15 and v16.
 ]
 
 [build-system]
